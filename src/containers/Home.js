@@ -1,15 +1,12 @@
 import React, {Component} from "react"
 import Table from "../components/Table"
+import results from "../data/data"
 
 class Home extends Component {
     constructor () {
         super()
         this.state = {
-            items: [
-                {id: 1, name: "merel", assignment: "2B", difficulty: 4, fun: 3},
-                {id: 2, name: "merel", assignment: "3", difficulty: 2, fun: 4},
-                {id: 3, name: "piet", assignment: "5", difficulty: 2, fun: 5},
-            ]
+            items: [results]
         }
         this.sortByAZ = this.sortByAZ.bind(this)
         this.sortByZA = this.sortByZA.bind(this)
