@@ -1,7 +1,7 @@
 import React from "react"
 import TableItem from "../components/TableItem"
 
-function Table ({items}) {
+function Table ({items, sortByAZ, sortByZA}) {
 
     const ListItems = items ? items.map (item => (
         <TableItem
@@ -18,7 +18,10 @@ function Table ({items}) {
         <div className="table">
             <table className= "table">
                 <thead className="table-head"> 
-                    <th className="table-head-row" > Name Student </th>                    
+                    <th className="table-head-row" > Name Student 
+                    <button onClick= { () => {sortByAZ("name")} }> v </button>
+                    <button onClick= { () => {sortByZA("name")} }> ^ </button></th>               
+                    
                     <th className="table-head-row"> Assignment </th>
                     <th className="table-head-row"> Difficulty?  </th>
                     <th className="table-head-row"> Fun? </th> 
