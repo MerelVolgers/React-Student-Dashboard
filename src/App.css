@@ -1,0 +1,28 @@
+.header{
+    background-color: pink;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.navigation{
+    background-color:yellow;
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main{
+    margin: 10px 50px 30px;
+}
+
+.table{
+    background-color: blue;
+}
+
+.footer{
+    background-color: green;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
