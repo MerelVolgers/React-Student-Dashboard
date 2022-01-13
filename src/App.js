@@ -12,12 +12,6 @@ function App() {
     <div className="App">
       <Header />
 
-      <nav className="navigation">
-        <Link to="/" className="nav-link"> Home </Link>
-        <Link to="/about" className="nav-link"> About </Link>
-        <Link to="/student" className="nav-link"> Student </Link>
-      </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

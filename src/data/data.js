@@ -1,12 +1,22 @@
-const csv = require('csv-parser')
-const fs = require('fs')
-const results = [] 
+import rawStudentData from "./studentdata.csv"
+import Papa from 'papaparse'
+import React, { useEffect, useState } from "react"
 
-fs.createReadStream('studentdata.csv')
-    .pipe(csv({}))
-    .on('data', (data) => results.push(data))
-    .on('end', () => {
-        console.log(results)
-    })
+function Data () {
+    const [data, setData] = useState([])
 
-// export default results
+    const getData = () => {
+        Papa.parse(rawStudentData)
+    }
+    useEffect( () => {
+        getData()
+    }, [] )
+
+    return(
+        <div>
+            <h1> Data </h1>
+        </div>
+    )
+}
+
+export default Data

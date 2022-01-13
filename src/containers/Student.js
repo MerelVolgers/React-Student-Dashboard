@@ -1,15 +1,26 @@
 import React from "react"
+import Chart from "../components/Chart"
 import Table from "../components/Table"
+import Checkboxes from "../components/Checkboxes"
+import StudentProfile from "../components/StudentProfile"
 
-function Student () {
+function Student ({items}) {
+
+    const ListStudents = items? items.map (item => (
+        <StudentProfile 
+            key= {item.id}
+            id = {item.id}
+            name = {item.name}
+            assignment = {item.assignment}
+            difficulty = {item.difficulty}
+            fun = {item.fun}
+        />
+    )) : ""
+
     return(
-        <div className="main">
-            <h1> this is the Single student page </h1>
-            <p> 1. student details/ profile </p>
-            <p> 2. bar chart of student </p>
-            <p> 3. line chart of student </p>
-            <p> 4. table of student </p>
-            {/* <p> <Table /> </p> */}
+        <div className="student">
+            <h1> Please click on a students name to go to their profile </h1>
+            <a href=""> {ListStudents} </a>
         </div>
     )
 }
